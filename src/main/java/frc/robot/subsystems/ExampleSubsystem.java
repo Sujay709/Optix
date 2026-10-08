@@ -14,6 +14,7 @@ public class ExampleSubsystem extends SubsystemBase {
   /** Creates a new ExampleSubsystem. */
   public ExampleSubsystem() {}
   private final SparkMax motor = new SparkMax(22, MotorType.kBrushless);
+
   /**
    * Example command factory method.
    *
@@ -40,7 +41,7 @@ public class ExampleSubsystem extends SubsystemBase {
 
   @Override
   public void periodic() {
-    // This method will be called once per scheduler run
+    motor.set(10);
   }
 
   @Override
